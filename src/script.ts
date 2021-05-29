@@ -31,10 +31,11 @@ let person2 : MyObject = {
 
 class Car {
     model : string
+    year : number = 1000
     constructor(model : string) {
         this.model = model
     }
 }
 
 let car1 = new Car('405')
-console.log(car1.model)
+console.log(car1.model , car1.year)

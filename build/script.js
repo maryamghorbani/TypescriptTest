@@ -23,9 +23,10 @@ var person2 = {
 };
 var Car = /** @class */ (function () {
     function Car(model) {
+        this.year = 1000;
         this.model = model;
     }
     return Car;
 }());
 var car1 = new Car('405');
-console.log(car1.model);
+console.log(car1.model, car1.year);
