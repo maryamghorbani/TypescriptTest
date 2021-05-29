@@ -3,3 +3,24 @@ let sum : ( x : number , y? : number , ... numbers : number[]) => number = ( x :
     return x;
 }
 console.log(sum(2  ))
+
+
+
+type MyObject = {
+    fullname : string,
+    age : (num : number) => string
+}
+
+let person : MyObject = {
+    fullname : 'maryam',
+    age : (num : number) => {
+        return `age : ${num}`
+    }
+};
+
+let person2 : MyObject = {
+    fullname : 'ali',
+    age : (num : number) => {
+        return `age : ${num}`
+    }
+};

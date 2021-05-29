@@ -9,3 +9,15 @@ var sum = function (x, y) {
     return x;
 };
 console.log(sum(2));
+var person = {
+    fullname: 'maryam',
+    age: function (num) {
+        return "age : " + num;
+    }
+};
+var person2 = {
+    fullname: 'ali',
+    age: function (num) {
+        return "age : " + num;
+    }
+};
