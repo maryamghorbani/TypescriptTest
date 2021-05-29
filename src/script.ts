@@ -27,3 +27,14 @@ let person2 : MyObject = {
         return `age : ${num}`
     }
 };
+
+
+class Car {
+    model : string
+    constructor(model : string) {
+        this.model = model
+    }
+}
+
+let car1 = new Car('405')
+console.log(car1.model)

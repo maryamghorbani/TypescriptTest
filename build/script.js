@@ -21,3 +21,11 @@ var person2 = {
         return "age : " + num;
     }
 };
+var Car = /** @class */ (function () {
+    function Car(model) {
+        this.model = model;
+    }
+    return Car;
+}());
+var car1 = new Car('405');
+console.log(car1.model);
