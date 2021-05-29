@@ -1,2 +1,3 @@
 "use strict";
-console.log('Hello');
+var fullname;
+fullname = 22;

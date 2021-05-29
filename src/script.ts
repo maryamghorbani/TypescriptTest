@@ -1,1 +1,3 @@
-console.log('Hello')
+let fullname;
+
+fullname = 22

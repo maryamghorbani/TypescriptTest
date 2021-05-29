@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +20,8 @@
     "url": "https://github.com/maryamghorbani/TypescriptTest/issues"
   },
   "homepage": "https://github.com/maryamghorbani/TypescriptTest#readme",
-  "description": "",
   "dependencies": {
     "node": "^16.1.0"
-  }
+  },
+  "description": ""
 }
