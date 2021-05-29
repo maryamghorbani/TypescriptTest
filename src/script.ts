@@ -30,12 +30,24 @@ let person2 : MyObject = {
 
 
 class Car {
-    model : string
-    year : number = 1000
+    private model : string
+    public year : number = 1000
+    protected color : string
     constructor(model : string) {
         this.model = model
+        this.color = 'red'
+    }
+    private seyHello() {
+        console.log('Hello')
     }
 }
 
-let car1 = new Car('405')
-console.log(car1.model , car1.year)
+class Irankhodro extends Car {
+    run (){
+        console.log(this.color)
+    }
+}
+
+
+let car1 = new Car('2000')
+console.log(car1.year)
