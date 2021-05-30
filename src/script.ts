@@ -29,7 +29,7 @@ let person2 : MyObject = {
 };
 
 
-class Car {
+abstract class Car {
     private model : string
     public year : number = 1000
     protected color : string
@@ -40,14 +40,27 @@ class Car {
     private seyHello() {
         console.log('Hello')
     }
+    set setColor(theColor : string) {
+        this.color = theColor;
+    }
+    get getColor() {
+        return this.color
+    }
+
+    abstract bar() : string
+    foo() : void {
+        console.log(this.bar())
+    }
 }
 
 class Irankhodro extends Car {
-    run (){
-        console.log(this.color)
+    bar (){
+        return 'maryam'
     }
 }
 
 
-let car1 = new Car('2000')
-console.log(car1.year)
+let car1 = new Irankhodro('206')
+car1.setColor = 'blue'
+console.log(car1)
+car1.foo()

@@ -43,6 +43,23 @@ var Car = /** @class */ (function () {
     Car.prototype.seyHello = function () {
         console.log('Hello');
     };
+    Object.defineProperty(Car.prototype, "setColor", {
+        set: function (theColor) {
+            this.color = theColor;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Car.prototype, "getColor", {
+        get: function () {
+            return this.color;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Car.prototype.foo = function () {
+        console.log(this.bar());
+    };
     return Car;
 }());
 var Irankhodro = /** @class */ (function (_super) {
@@ -50,10 +67,12 @@ var Irankhodro = /** @class */ (function (_super) {
     function Irankhodro() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Irankhodro.prototype.run = function () {
-        console.log(this.color);
+    Irankhodro.prototype.bar = function () {
+        return 'maryam';
     };
     return Irankhodro;
 }(Car));
-var car1 = new Car('2000');
-console.log(car1.year);
+var car1 = new Irankhodro('206');
+car1.setColor = 'blue';
+console.log(car1);
+car1.foo();
