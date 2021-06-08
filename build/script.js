@@ -47,14 +47,14 @@ var Car = /** @class */ (function () {
         set: function (theColor) {
             this.color = theColor;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Car.prototype, "getColor", {
         get: function () {
             return this.color;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Car.prototype.foo = function () {
@@ -76,3 +76,16 @@ var car1 = new Irankhodro('206');
 car1.setColor = 'blue';
 console.log(car1);
 car1.foo();
+var Person = /** @class */ (function () {
+    function Person() {
+    }
+    Person.getInstance = function () {
+        if (!Person.instance)
+            Person.instance = new Person();
+        return Person.instance;
+    };
+    return Person;
+}());
+var person1 = Person.getInstance();
+var person2 = Person.getInstance();
+console.log(person1 === person2);

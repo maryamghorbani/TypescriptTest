@@ -64,3 +64,22 @@ let car1 = new Irankhodro('206')
 car1.setColor = 'blue'
 console.log(car1)
 car1.foo()
+
+
+
+
+class Person {
+    private static instance : Person
+    private constructor() {}
+
+    public static getInstance () : Person {
+        if (! Person.instance)
+            Person.instance = new Person()
+        return Person.instance
+    }
+}
+
+let person1 = Person.getInstance()
+let person2 = Person.getInstance()
+
+console.log(person1 == person2)
