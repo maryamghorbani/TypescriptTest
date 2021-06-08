@@ -77,6 +77,7 @@ class Person {
             Person.instance = new Person()
         return Person.instance
     }
+    // این تیکه کد رو هرجا که خواستیم فقط یه نمونه از کلاس داشته باشیم استفاده میکنیم
 }
 
 let person1 = Person.getInstance()
